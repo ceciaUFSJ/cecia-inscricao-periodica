@@ -492,45 +492,502 @@ O início do semestre letivo e as datas da
 
 
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Inscrição Periódica – CECIA</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --cecia-red: #8b0000;
+  --cecia-red-dark: #7a0000;
+  --text: #222;
+}
+
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", system-ui, Arial, sans-serif;
+  background: #fff;
+  color: var(--text);
+}
+
+/* =========================================================
+   HEADER MODERNO
+   ========================================================= */
+.header-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  background: linear-gradient(135deg, var(--cecia-red-dark), var(--cecia-red));
+  padding: 28px 0 18px;
+}
+
+.header-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Grupo central (logos + título) */
+.header-group {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  column-gap: 12px;
+  margin-bottom: 18px;
+}
+
+/* Logos */
+.logo {
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.logo-ufsj {
+  height: 96px;
+}
+
+.logo-cecia {
+  height: 120px;
+}
+
+/* Texto */
+.title {
+  text-align: center;
+  max-width: 600px;
+}
+
+.course {
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #ffffff, #dddddd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ufsj {
+  display: block;
+  margin-top: 6px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #f2f2f2;
+}
+
+/* Hover sutil */
+.header-link:hover .logo {
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   NAVEGAÇÃO DO HEADER
+   ========================================================= */
+.header-nav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* matriz fixa */
+  gap: 5px;
+  margin-top: 1px;
+}
+
+.header-nav a {
+  height: 20px;
+  padding: 0px 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  line-height: 1.2;
+
+  font-size: 0.75rem;        /* ~30% menor que 1rem */
+  font-weight: 600;
+
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #8b1d1d;
+
+  border: none;             /* sem borda */
+  border-radius: 3px;       /* pode remover se quiser totalmente reto */
+
+  box-shadow: none;         /* garante ausência de contorno */
+  outline: none;
+}
+.header-nav a:hover {
+  background-color: #a82424;
+}
+
+
+
+
+
+
+  .alerta-formulario{
+    background:#fff7ed;
+    border:2px solid #f59e0b;
+    border-left:8px solid #ea580c;
+    border-radius:12px;
+    padding:24px;
+    margin:30px 0;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.alerta-formulario h3{
+    color:#b45309;
+    margin-bottom:18px;
+    font-size:1.45rem;
+}
+
+.alerta-formulario p{
+    margin:14px 0;
+    line-height:1.7;
+}
+
+.alerta-formulario ul{
+    margin:15px 0 20px 25px;
+    line-height:1.8;
+}
+
+.alerta-formulario li{
+    margin-bottom:8px;
+}
+
+.alerta-formulario hr{
+    border:none;
+    border-top:1px solid #fdba74;
+    margin:24px 0;
+}
+
+.botao-formulario{
+    display:inline-block;
+    background:#ea580c;
+    color:#fff;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:8px;
+    font-weight:700;
+    font-size:16px;
+    transition:.2s;
+}
+
+.botao-formulario:hover{
+    background:#c2410c;
+}
+
+.alerta-final{
+    margin-top:20px;
+    padding:16px;
+    background:#ffedd5;
+    border:2px solid #fb923c;
+    border-radius:8px;
+    color:#9a3412;
+    font-weight:700;
+    text-align:center;
+}
+
+
+
   
 
+
+
+@media (max-width: 768px) {
+
+  /* ESCONDE AS LOGOS NO MOBILE */
+  .logo-ufsj,
+  .logo-cecia {
+    display: none;
+  }
+
+  /* Ajusta o layout para apenas o título */
+  .header-group {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  /* BOTÕES 2x MAIS ALTOS NO MOBILE */
+  .header-nav a {
+    height: 40px;
+    padding: 0 4px;
+  }
+
+  /* REDUZ A FONTE EM 10% NO MOBILE */
+  body {
+    font-size: 90%;
+  }
+
+  /* ESCONDE O TEXTO "UFSJ" NO MOBILE */
+  .ufsj {
+    display: none;
+  }
+  
+   .header-nav a {
+    font-size: 0.56rem;
+  }
+
+}
+
+
+
+/* =========================================================
+   CONTEÚDO INSTITUCIONAL
+   ========================================================= */
+.main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 24px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.main h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.datas {
+  margin-bottom: 30px;
+}
+
+.datas ul {
+  margin: 10px 0 0 20px;
+}
+
+/* Aviso */
+.aviso {
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin: 60px 0 30px;
+}
+
+/* ===== PASTAS DO DRIVE ===== */
+.folder {
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.folder-header {
+  background: #f7f7f7;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.folder-header:hover {
+  background: #ececec;
+}
+
+.folder-content {
+  display: none;         
+  padding: 10px 18px;
+  background: #fff;
+}
+
+.folder.open .folder-content {
+  display: block;        
+}
+
+.file {
+  margin: 6px 0;
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="header-inner">
+
+    <div class="header-group">
+
+<a href="https://cecia.ufsj.edu.br/" class="logo-link" aria-label="Página inicial da UFSJ">
+  <img
+    class="logo logo-ufsj"
+    src="https://raw.githubusercontent.com/ceciaUFSJ/gerador-planos/main/ufsjbco.png"
+    alt="Universidade Federal de São João del-Rei – UFSJ"
+    style="transform: scale(1.1); transform-origin: left center;"
+  >
+</a>
+
+<div class="title">
+  <h1 class="course">Engenharia da Computação e Inteligência Artificial</h1>
+  <span class="ufsj">Universidade Federal de São João del-Rei – UFSJ</span>
+</div>
+
+<a href="https://cecia.ufsj.edu.br/" class="logo-link" aria-label="Site do curso CECIA">
+  <img
+    class="logo logo-cecia"
+    src="https://raw.githubusercontent.com/ceciaUFSJ/gerador-planos/main/ceciabco.png"
+    alt="Curso de Engenharia da Computação e Inteligência Artificial – CECIA"
+  >
+</a>
+      
+
+    </div>
+
+<nav class="header-nav">
+  <a href="https://ceciaufsj.github.io/cecia-atividades-complementares/">Atividades Complementares</a>
+  <a href="https://ceciaufsj.github.io/cecia-extensao/">Atividades de Extensão</a>
+  <a href="https://ceciaufsj.github.io/cecia-colegiado/">Colegiado</a>
+  <a href="https://ceciaufsj.github.io/cecia-editais/">Editais</a>
+  <a href="https://ceciaufsj.github.io/cecia-ementas/">Ementas</a>
+  <a href="https://ceciaufsj.github.io/cecia-tabela-equivalencia/">Equivalência de Disciplinas</a>
+  <a href="https://ceciaufsj.github.io/cecia-estagio/">Estágio Curricular</a>
+  <a href="https://cecia.ufsj.edu.br/">Home</a>
+  <a href="https://ceciaufsj.github.io/cecia-horarios/">Horários e Salas</a>
+  <a href="https://ceciaufsj.github.io/cecia-inscricao-periodica/">Inscrição Periódica</a>
+  <a href="https://ceciaufsj.github.io/cecia-logos/">Logos</a>
+  <a href="https://ceciaufsj.github.io/cecia-modelos-planos/">Modelos de Planos de Ensino</a>
+  <a href="https://ceciaufsj.github.io/cecia-monitoria/">Monitoria</a>
+  <a href="https://ceciaufsj.github.io/cecia-nde/">NDE</a>
+  <a href="https://ceciaufsj.github.io/cecia-planos/">Planos de Ensino Aprovados</a>
+  <a href="https://ceciaufsj.github.io/cecia-projetopedagogico/">PPC</a>
+  <a href="https://ceciaufsj.github.io/cecia-requerimento-eletronico/#">Requerimento Eletrônico</a>
+  <a href="https://ceciaufsj.github.io/cecia-servidores/">Servidores do Curso</a>
+  <a href="https://ceciaufsj.github.io/cecia-tcc/">TCC</a>
+  <a href="https://ceciaufsj.github.io/cecia-transferencia/">Transferência de Alunos</a>
+</nav>
+
+
+  </div>
+</header>
+
+  
+<div class="main">
+  
+
+
+
+<h2>Inscrição Periódica</h2>
+
+
+<div class="container">
+
+<p class="titulo">
+⚠️ MANTENHA SUA MATRÍCULA REGULAR COM A UFSJ DE ACORDO COM A RESOLUÇÃO Nº 026, DE 27 DE OUTUBRO DE 2021 – CONEP
+</p>
+
+<div class="aviso">
+<p>
+<strong>Importante:</strong> O currículo da <strong>Engenharia da Computação e Inteligência Artificial</strong> estabelece um limite máximo de <span class="destaque">400 horas de matrícula por semestre</span>. Caso esse limite seja excedido, o <span class="destaque">SIGAA impedirá a confirmação da matrícula</span>.
+</p>
+</div>
+
+<div class="artigo">
+<p>
+<strong>Art. 28.</strong> A matrícula em unidades curriculares é 
+<span class="destaque">obrigatória</span> para todos os discentes vinculados a cursos de graduação em todo período letivo regular.
+</p>
+
+<p>
+<strong>Parágrafo único.</strong> A não realização de matrícula, exceto nos períodos letivos em que o programa estiver suspenso ou em mobilidade em outra instituição, caracteriza 
+<span class="destaque">abandono de curso</span> e gera 
+<span class="destaque">cancelamento do vínculo com a UFSJ</span>.
+</p>
+</div>
+
+</div>
+
+
+
+
+  
+
+  <div class="datas">
+
+<div style="
+  border: 2px solid #c62828;
+  background-color: #fff5f5;
+  padding: 18px;
+  border-radius: 8px;
+  margin: 20px 0;
+  font-size: 16px;
+  line-height: 1.5;
+">
+
+
+
+
+<strong style="color:#c62828;">⚠️ ATENÇÃO!</strong><br>
+
+O início do semestre letivo e as datas da 
+<strong>1ª, 2ª e 3ª etapas</strong> da inscrição periódica devem ser consultados no 
+<strong>Calendário Acadêmico da UFSJ</strong>:
+<a href="https://ufsj.edu.br/soces/calendarios.php" target="_blank" rel="noopener noreferrer">
+📅 Acessar Calendário Acadêmico da UFSJ
+</a>
+
+<br><br>
+
+<p><strong>A inscrição periódica na UFSJ é dividida em até três etapas:</strong></p>
+
+<ol style="padding-left:28px;">
+  <li>
+    <strong>Primeira Etapa (Matrícula):</strong> efetuada no período estabelecido no Calendário Acadêmico e corresponde à possibilidade de o(a) discente selecionar os componentes curriculares que cursará no semestre vigente.
+  </li>
+
+  <li>
+    <strong>Segunda Etapa (Rematrícula):</strong> efetuada no período estabelecido no Calendário Acadêmico e corresponde à possibilidade de o(a) discente realizar ajustes em sua matrícula, ou efetivá-la, caso não a tenha feito no período de matrícula.
+  </li>
+
+  <li>
+    <strong>Terceira Etapa (Matrícula Extraordinária):</strong> concluído o processamento da rematrícula, faculta-se ao(à) discente a possibilidade de ocupação de vagas que, porventura, ainda existam nas turmas, por meio da matrícula extraordinária. Essa etapa é efetuada pelo(a) discente.
+  </li>
+</ol>
+
+<p><strong>📄 As resoluções mencionadas estão disponíveis na pasta ao final desta página. Consulte também o <u>MANUAL DE INSCRIÇÃO PERIÓDICA</u>, disponível no final desta página.</strong>
+</p>
+
+</div>
 
 
 
 <div class="alerta-formulario">
 
-<h3>⚠️Casos Excepcionais - Usar o FAC (Ferramentas de Apoio à Coordenação)</h3>
+<h3>📄 FAC – Ferramentas de Apoio à Coordenação</h3>
 
-
-<!--
-<p style="text-align:center; margin:20px 0;">
-<a class="botao-formulario"
-   href="https://docs.google.com/forms/d/e/1FAIpQLSdTIa10U2QktbUxR7sR2BWz4o9KVRokKB2PaLxaCWfXnn7eQw/viewform?usp=header"
-   target="_blank"
-   rel="noopener noreferrer">
-📄 Acessar Formulário Online
-</a>
+<p>
+Utilize o formulário abaixo <strong>somente para os casos excepcionais de inscrição periódica</strong> previstos pela Coordenação do Curso.
+O acesso deve ser realizado utilizando o <strong>e-mail cadastrado no SIGAA</strong>.
 </p>
--->
-  
-
-  
-
-<p><strong>O FAC poderá ser utilizado somente para:</strong></p>
-
-<ul>
-  <li>Inscrição em disciplina com quebra de pré-requisito ainda não cursado (ou reprovado com média igual ou superior a 5,0 <strong>[usar essa opção]</strong>).</li>
-
-  <li>Inscrição em disciplina com quebra de pré-requisito já cursado com aprovação, mas ainda não validado pelo SIGAA (inconsistência no histórico).</li>
-
-  <li>Inscrição em disciplina com extrapolação de carga horária (conforme os critérios descritos abaixo).</li>
-
-  <li>Inscrição em disciplina de primeiro período (vagas remanescentes das matrículas dos ingressantes).</li>
-
-  <li>Inscrição em disciplina optativa ofertada por outro curso de Engenharia do CAP. Caso a disciplina seja obrigatória, <strong>selecione esta opção</strong> e, no campo <strong>"Nome completo da disciplina optativa"</strong>, informe: <em>Disciplina obrigatória: [nome da disciplina]</em>.</li>
-
-  <li>Outras solicitações, quando orientadas pela Coordenação do Curso.</li>
-</ul>
 
 <p style="text-align:center; margin:20px 0;">
   <a class="botao-formulario"
@@ -543,7 +1000,294 @@ O início do semestre letivo e as datas da
   </a>
 </p>
 
+<hr>
+
+<p><strong>O FAC poderá ser utilizado exclusivamente para:</strong></p>
+
+<ul>
+  <li>Inscrição em disciplina com quebra de pré-requisito ainda não cursado (ou reprovado com média igual ou superior a 5,0).</li>
+
+  <li>Inscrição em disciplina com quebra de pré-requisito já cursado com aprovação, mas ainda não validado pelo SIGAA (inconsistência no histórico).</li>
+
+  <li>Inscrição em disciplina com extrapolação de carga horária, conforme os critérios estabelecidos nesta página.</li>
+
+  <li>Inscrição em disciplina do primeiro período, em vagas remanescentes das matrículas dos ingressantes.</li>
+
+  <li>Inscrição em disciplina optativa ofertada por outro curso de Engenharia do CAP. Caso a disciplina seja obrigatória, selecione esta opção e informe, no campo <strong>"Nome completo da disciplina optativa"</strong>: <em>Disciplina obrigatória: [nome da disciplina]</em>.</li>
+
+  <li>Outras solicitações, quando expressamente orientadas pela Coordenação do Curso.</li>
+</ul>
+
+<div class="alerta-final">
+❗ Solicitações fora das situações descritas acima não serão analisadas pela Coordenação do Curso.
+</div>
+
+<hr>
+
+<p>
+<strong>⚠️ IMPORTANTE:</strong> Antes de preencher o FAC, o(a) discente deve obrigatoriamente tentar realizar a inscrição pelo <strong>SIGAA</strong>.
+</p>
+
+<p>
+Caso a inscrição não seja efetivada, é obrigatório anexar um <strong>print da tela e/ou comprovante da tentativa de inscrição</strong>, que deverá ser enviado juntamente com o formulário.
+</p>
+
+<div class="alerta-final">
+❗ Solicitações sem comprovação da tentativa de inscrição pelo SIGAA não serão analisadas pela Coordenação do Curso.
+</div>
+
+</div>
+
+
   
+<hr>
+
+<p>
+<strong>⚠️ IMPORTANTE:</strong> Antes de preencher o FAC, o(a) discente
+<strong>deve obrigatoriamente tentar realizar a inscrição pelo SIGAA.</strong>
+</p>
+
+<p>
+Caso a inscrição não seja efetivada, é obrigatório anexar um
+<strong>print da tela e/ou comprovante da tentativa de inscrição</strong>,
+que deverá ser enviado juntamente com o formulário.
+</p>
+
+<div class="alerta-final">
+❗ <strong>Solicitações sem comprovação da tentativa de inscrição pelo SIGAA NÃO serão analisadas pela Coordenação do Curso.</strong>
+</div>
+
+</div>
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+<div class="avisos">
+
+<p>⇒ Todas as solicitações encaminhadas por meio deste formulário serão analisadas pela coordenação do curso durante o processo de matrícula (primeira, segunda e/ou terceira etapa).</p>
+
+<p>⇒ O formulário somente poderá ser preenchido utilizando o <strong>e-mail institucional</strong> (caso não tenha acesso, verificar as instruções abaixo).</p>
+
+<p>⇒ <strong>O PREENCHIMENTO DO FORMULÁRIO NÃO É GARANTIA DE VAGA.</strong></p>
+
+<p>⇒ Das solicitações elencadas acima, <strong>NÃO serão analisadas</strong> solicitações encaminhadas por e-mail, atendimento ao aluno via SIGAA ou requerimento eletrônico (publicado na aba <strong>Requerimento Eletrônico</strong>).</p>
+
+<p>⇒ A abertura deste formulário online trata-se de <strong>caso excepcional</strong>, não sendo garantida sua continuidade nos próximos semestres letivos, pois pretende-se que todo o processo de matrícula discente seja realizado no <strong>SIGAA</strong> pelo(a) próprio(a) aluno(a).</p>
+
+</div>
+
+  
+
+  
+<div class="datas">
+<strong>Outras Orientações</strong><br><br>
+
+<div class="avisos">
+
+<p>
+⇒  Problemas com seu <strong>e-mail institucional</strong>? <a href="https://ntinf.ufsj.edu.br/index.php/catalogo-de-servicos/suporte-ao-e-mail-institucional-de-discentes" target="_blank"><strong>clique aqui</strong></a> e/ou entre em contato com a Central de Suporte pelo e-mail: <strong>centraldesuporte@ufsj.edu.br</strong>.
+</p>
+
+<p>
+⇒ Alunos(as), inclusive ingressantes do período <strong>anterior</strong>, deverão realizar o processo de inscrição em disciplinas por meio do <strong>SIGAA</strong>. 
+Apenas os(as) calouros(as)/ingressantes do período <strong>atual</strong> terão as disciplinas do <strong>1º período</strong> cadastradas automaticamente pela <strong>Dicon</strong>.
+</p>
+
+<p>
+⇒  Solicitações de inscrição em atividades do tipo <strong>TCC</strong>, 
+<strong>Estágio Obrigatório</strong> e 
+<strong>Atividades Complementares</strong> deverão ser realizadas por meio do 
+<strong>Requerimento Eletrônico</strong> na página do curso (aba <strong>Requerimento Eletrônico</strong>).
+</p>
+
+<p>
+⇒  Em caso de disciplinas já cursadas com aprovação <strong>em curso diferente do de origem</strong>, é necessário solicitar <strong>equivalência</strong> junto à Coordenação do Curso, por meio do 
+<strong>Requerimento Eletrônico</strong> na página do curso (aba <strong>Requerimento Eletrônico</strong>).
+</p>
+
+</div></div>
+
+
+
+
+
+
+
+
+  
+<div class="datas">
+<strong>Quebra de Pré-Requisito e/ou Extrapolação de Carga Horária</strong><br><br>
+
+<p>
+Será concedida a quebra de pré-requisito para alunos(as) reprovados(as) com média igual ou acima de 5 pontos e frequentes 
+(não podem ter sido reprovados(as) por frequência).
+</p>
+
+<p><strong>A ordem de prioridade para matrícula em quebra de pré-requisitos fica:</strong></p>
+
+<ol style="padding-left: 20px;">
+  <li>Discente do curso de Engenharia da Computação e Inteligência Artificial com maior carga horária integralizada;</li>
+  <li>Em caso de empate, discente do curso de Engenharia da Computação e Inteligência Artificial com maior média de conclusão (MC);</li>
+  <li>Persistindo o empate, discente do curso de Engenharia da Computação e Inteligência Artificial que já tenha cumprido as disciplinas do ciclo básico.</li>
+</ol>
+
+<p>
+<strong>Extrapolação de carga horária:</strong> ocorre somente para discentes aos quais faltem até <strong>540 horas</strong> para a conclusão do curso (não sendo contabilizadas as cargas horárias de <strong>TCC</strong>, <strong>Estágio Obrigatório</strong> e <strong>Atividades Complementares</strong>) e que estejam na condição de <strong>colação de grau no semestre da solicitação</strong> de quebra de pré-requisito e/ou extrapolação.
+</p>
+
+  
+</div>
+
+
+<div class="inscricao-periodica">
+
+<h3>📘 O QUE É E COMO FUNCIONA A INSCRIÇÃO PERIÓDICA?</h3>
+
+<p>
+A <strong>Inscrição Periódica</strong> é a inscrição realizada semestralmente nas unidades curriculares do curso em que o(a) discente está matriculado(a). 
+É regulamentada pela <strong>Resolução CONEP nº 026/2021</strong> e modificada pela <strong>Resolução CONEP nº 011/2023</strong>, 
+constando de <strong>pré-inscrição em três etapas</strong>, conforme definido no <strong>Calendário Acadêmico</strong> do respectivo ano/semestre.
+</p>
+
+<p>
+A inscrição é <strong>obrigatória para todos os alunos de graduação da UFSJ</strong>, sendo de inteira responsabilidade do(a) discente.
+</p>
+
+<p>
+<strong>⚠️ Muita atenção:</strong> o(a) aluno(a) que, nos prazos previstos no Calendário Acadêmico para realização da Inscrição Periódica, 
+não realizar a inscrição em unidades curriculares, nem o trancamento de matrícula ou sua renovação, 
+<strong>será desvinculado(a) da instituição</strong> (Art. 96 do Regimento Geral da UFSJ).
+</p>
+
+</div>
+
+
+  
+
+
+
+  
+
+  
+
+<div id="documentos">Carregando documentos...</div>
+
+</div>
+
+<!-- ================= DOCUMENTOS (GOOGLE DRIVE) ================= -->
+<script>
+const API_KEY = "AIzaSyACMK-L2y2-ZyJkwSkuu992Zug1dPFZgQM";
+const ROOT_FOLDER = "1Bf41FsG2uyxWhhTsDXJorGlUBFouOwLE";
+
+async function driveApi(q){
+  const url =
+    `https://www.googleapis.com/drive/v3/files?q=${encodeURIComponent(q)}&fields=files(id,name,mimeType)&supportsAllDrives=true&includeItemsFromAllDrives=true&key=${API_KEY}`;
+  const r = await fetch(url);
+  return (await r.json()).files || [];
+}
+
+async function carregarDocumentos(){
+  const c = document.getElementById("documentos");
+  c.innerHTML = ""; // remove "Carregando documentos..."
+
+  let pastas = await driveApi(
+    `'${ROOT_FOLDER}' in parents and mimeType='application/vnd.google-apps.folder'`
+  );
+
+  pastas.sort((a,b)=>a.name.localeCompare(b.name,"pt-BR",{sensitivity:"base"}));
+
+  for(const p of pastas){
+    const box = document.createElement("div");
+    box.className = "folder";
+
+    const h = document.createElement("div");
+h.className = "folder-header";
+h.textContent = "📁 " + p.name;
+
+/* >>> ADICIONE ISTO <<< */
+h.addEventListener("click", () => {
+  box.classList.toggle("open");
+});
+
+
+    const cont = document.createElement("div");
+    cont.className = "folder-content";
+
+    const arqs = await driveApi(
+      `'${p.id}' in parents and mimeType!='application/vnd.google-apps.folder'`
+    );
+
+    arqs.sort((a,b)=>a.name.localeCompare(b.name,"pt-BR",{sensitivity:"base"}))
+        .forEach(a=>{
+          cont.innerHTML += `
+            <div class="file">
+              📄 <a target="_blank" href="https://drive.google.com/file/d/${a.id}/view">
+                ${a.name}
+              </a>
+            </div>`;
+        });
+
+    box.appendChild(h);
+    box.appendChild(cont);
+    c.appendChild(box);
+  }
+}
+
+carregarDocumentos();
+</script>
+
+<!-- ================= DATA DE ATUALIZAÇÃO ================= -->
+<script>
+const DOC_DATA_ATUALIZACAO =
+  "https://docs.google.com/document/d/1cQfxp76-VPgDF8TIuH0IMPtRX-ASWC02/export?format=txt";
+
+async function carregarDataAtualizacao(){
+  try{
+    const r = await fetch(DOC_DATA_ATUALIZACAO);
+    const t = (await r.text()).split(/\r?\n/).filter(l=>l.trim()).join(" ");
+    document.getElementById("data-atualizacao").innerHTML =
+      "<strong>Última atualização:</strong> " + t;
+  }catch{
+    document.getElementById("data-atualizacao").textContent =
+      "Última atualização: informação indisponível.";
+  }
+}
+
+carregarDataAtualizacao();
+</script>
+
+<div class="footer">
+  Página institucional mantida pela Coordenação do Curso – CECIA / UFSJ.<br>
+  <span id="data-atualizacao">Carregando data da última atualização...</span>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
   
 <hr>
 
